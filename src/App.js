@@ -1,10 +1,11 @@
 import React from "react";
 import MovieList from "./components/MovieList";
+import Header from "./shared/Header";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello HOME</h1>
+      <Header />
       <MovieList />
     </div>
   );

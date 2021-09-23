@@ -23,7 +23,7 @@ export const getSingleMovie = async (id) => {
     fetch(url)
       .then((data) => data.json())
       .then((c) => {
-        return c.name;
+        return c;
       })
   );
 

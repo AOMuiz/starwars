@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useMovieList from "../hooks/useMovieList";
+import Loader from "../shared/Loader";
 import MovieDetail from "./MovieDetail";
 
 const MovieList = () => {
@@ -14,19 +15,22 @@ const MovieList = () => {
   return (
     <div>
       {loading ? (
-        <h1>Fetching Details</h1>
+        <Loader />
       ) : (
         <div>
-          <select name="" id="" onChange={(e) => onSelectChange(e)}>
-            <option selected disabled>
-              select Movie
-            </option>
-            {movieList.map((movie) => (
-              <option key={movie.id} value={`${movie.id}`}>
-                {movie.title}
+          <div className="select">
+            <select name="" id="" onChange={(e) => onSelectChange(e)}>
+              <option defaultValue selected disabled>
+                select Movie
               </option>
-            ))}
-          </select>
+              {movieList.map((movie) => (
+                <option key={movie.id} value={`${movie.id}`}>
+                  {movie.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
           {selectedId && <MovieDetail id={selectedId} />}
         </div>
       )}
