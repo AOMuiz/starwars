@@ -19,8 +19,13 @@ const MovieList = () => {
       ) : (
         <div>
           <div className="select">
-            <select name="" id="" onChange={(e) => onSelectChange(e)}>
-              <option defaultValue selected disabled>
+            <select
+              name=""
+              id=""
+              defaultValue="Select Movie"
+              onChange={(e) => onSelectChange(e)}
+            >
+              <option value="Select Movie" disabled>
                 select Movie
               </option>
               {movieList.map((movie) => (

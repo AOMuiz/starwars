@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import useMovieDetail from "../hooks/useMovieDetails";
 // import { catchError } from "../api/starwarsapi";
 import Loader from "../shared/Loader";
+import CharactersTable from "./CharactersTable";
+import {
+  Wrapper,
+  Label,
+  Text,
+  Header,
+  Title,
+  Container,
+} from "./MovieDetail.style";
 
 const MovieDetail = ({ id }) => {
   const { loading, movieDetail } = useMovieDetail(Number(id));
@@ -10,17 +19,23 @@ const MovieDetail = ({ id }) => {
   useEffect(() => {
     setMovie(movieDetail);
     console.log(movie);
-  }, [movie, movieDetail]);
+  }, [id, movie, movieDetail]);
 
   return (
     <div>
       {loading ? (
         <Loader />
       ) : (
-        <div className="movieDetails">
-          <h1 className="movieTitle">{movie.title}</h1>
-          <p className="movieDescription">{movie.description}</p>
-        </div>
+        <Container>
+          <Header>
+            <Title>{movie.title}</Title>
+          </Header>
+          <Wrapper>
+            <Label>Description</Label>
+            <Text>{movie.description}</Text>
+          </Wrapper>
+          <CharactersTable products={movie.characters} />
+        </Container>
       )}
     </div>
   );
