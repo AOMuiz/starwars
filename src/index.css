@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+@font-face {
+  font-family: "Star Jedi";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Star Jedi"), local("StarJedi"),
+    url("./shared/assets/fonts/Starjedi.ttf") format("truetype");
+  display: swap;
 }
 
 html {
@@ -13,52 +12,22 @@ html {
   box-sizing: border-box;
 }
 
-/* 768px */
-@media screen and (max-width: 48em) {
-  html {
-    font-size: 56.25%;
-  }
-}
-
-/* 576px */
-@media screen and (max-width: 36em) {
-  html {
-    font-size: 50%;
-  }
-}
-
 body {
-  margin: 0;
-  font-family: "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  background: rgb(20, 20, 20);
-  /* overflow: hidden; */
-  color: #ffc909;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   overflow-y: scroll;
-  padding-bottom: 2rem;
 }
 
-a,
+/* a,
 a:link,
 a:hover,
 a:focus {
   color: currentColor;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
-.movieDetails {
-  padding: 1.5rem;
-  line-height: 2.2rem;
-  text-align: justify;
-}
-.movieTitle {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-select {
+/* select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -76,7 +45,7 @@ select {
 }
 select::-ms-expand {
   display: none;
-}
+} */
 .select {
   position: relative;
   display: flex;
@@ -102,15 +71,15 @@ select::-ms-expand {
   transition: 0.25s all ease;
 }
 .select:hover::after {
-  color: #23b499;
+  color: #2098d1;
 }
 
-table {
+/* table {
   width: 100%;
   border-collapse: collapse;
-}
+} */
 
-thead th {
+/* thead th {
   text-align: left;
   border-bottom: 2px solid black;
 }
@@ -125,9 +94,9 @@ thead button {
   margin-bottom: 1px;
   background-color: transparent;
   color: #fff;
-}
+} */
 
-thead button.ascending::after {
+/* thead button.ascending::after {
   content: "👇";
   display: inline-block;
   margin-left: 1em;
@@ -137,13 +106,4 @@ thead button.descending::after {
   content: "☝️";
   display: inline-block;
   margin-left: 1em;
-}
-
-tbody td {
-  padding: 0.5em;
-  border-bottom: 1px solid #ccc;
-}
-
-tbody tr:hover {
-  background-color: #eee;
-}
+} */

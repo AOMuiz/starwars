@@ -8,17 +8,12 @@ export default function useMovieDetail(movieId) {
     characters: [],
   });
   const [loading, setLoading] = useState(true);
-  const [err, setErr] = useState(false);
+  const [err, setErr] = useState(null);
 
   useEffect(() => {
     let mounted = true;
     const fetchData = async () => {
-      const movieData = await getSingleMovie(movieId).catch((e) => {
-        console.log(
-          "There has been a problem with your fetch operation: " + e.message
-        );
-        setErr(true);
-      });
+      const movieData = await getSingleMovie(movieId);
       if (mounted) {
         setMovieDetail(movieData);
         setLoading(false);
@@ -37,3 +32,10 @@ export default function useMovieDetail(movieId) {
     err,
   };
 }
+
+// .catch((e) => {
+//         console.log(
+//           "There has been a problem with your fetch operation: " + e.message
+//         );
+//         setErr(true);
+//       });

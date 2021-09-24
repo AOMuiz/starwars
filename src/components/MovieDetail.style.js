@@ -37,12 +37,14 @@ export const Title = styled.h2`
   font-size: 4rem;
   margin-bottom: 1.5rem;
   letter-spacing: 2px;
+  //   margin-top: 2rem;
 `;
 
 export const Container = styled.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 

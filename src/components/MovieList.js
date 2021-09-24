@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import useMovieList from "../hooks/useMovieList";
 import Loader from "../shared/Loader";
+import { Select } from "../shared/styles/CharacterTable.styles";
 import MovieDetail from "./MovieDetail";
 
 const MovieList = () => {
-  const { loading, movieList } = useMovieList();
+  const { loading, movieList, err, errMessage } = useMovieList();
   const [selectedId, setSelectedId] = useState(null);
 
   const onSelectChange = (event) => {
     console.log(event.target.value);
     setSelectedId(event.target.value);
   };
+
+  console.log(err, errMessage);
 
   return (
     <div>
@@ -19,7 +22,7 @@ const MovieList = () => {
       ) : (
         <div>
           <div className="select">
-            <select
+            <Select
               name=""
               id=""
               defaultValue="Select Movie"
@@ -33,7 +36,7 @@ const MovieList = () => {
                   {movie.title}
                 </option>
               ))}
-            </select>
+            </Select>
           </div>
 
           {selectedId && <MovieDetail id={selectedId} />}

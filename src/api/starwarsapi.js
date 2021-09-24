@@ -1,24 +1,29 @@
 import { API_URL } from "./baseurl";
 
 export const getAllMovie = async () => {
-  const res = await fetch(API_URL);
-  if (!res.ok) {
-    throw Error("could not fetch the deta for that resource");
-  }
+  try {
+    const res = await fetch(API_URL);
+    if (!res.ok) {
+      throw Error("could not fetch the deta for that resource");
+    }
 
-  const resJson = await res.json();
-  const editedMovieList = resJson.results.map((movie) => ({
-    id: Number(movie.url.split("/").filter(Boolean).pop()),
-    title: movie.title,
-    description: movie.opening_crawl,
-    releaseDate: movie.release_date,
-  }));
-  return editedMovieList;
+    const resJson = await res.json();
+    const editedMovieList = resJson.results.map((movie) => ({
+      id: Number(movie.url.split("/").filter(Boolean).pop()),
+      title: movie.title,
+      description: movie.opening_crawl,
+      releaseDate: movie.release_date,
+    }));
+    return editedMovieList;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getSingleMovie = async (id) => {
   const res = await fetch(`${API_URL}${id}/`);
   if (!res.ok) {
+    console.log(`${res.status}`);
     throw new Error(`HTTP error! status: ${res.status}`);
   }
 

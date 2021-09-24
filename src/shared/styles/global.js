@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     src: local('Star Jedi'), local('StarJedi'),
-      url('../assets/Starjedi.ttf') format('truetype');
+      url('../assets/fonts/Starjedi.ttf') format('truetype');
     display: swap;
   }
 
@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Star Jedi','Open Sans', sans-serif;
     font-size: 1.6rem;
     overflow-y: scroll;
     color: ${COLOR_WHITE};

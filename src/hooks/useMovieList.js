@@ -4,6 +4,7 @@ import { getAllMovie } from "../api/starwarsapi";
 export default function useMovieList() {
   const [movieList, setMovieList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -14,7 +15,6 @@ export default function useMovieList() {
         setLoading(false);
       }
     };
-
     fetchData();
     return () => {
       mounted = false;
@@ -24,5 +24,6 @@ export default function useMovieList() {
   return {
     loading,
     movieList,
+    errorMessage,
   };
 }
