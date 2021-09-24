@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as Logo } from "./assets/logo.svg";
+import { ReactComponent as Logo } from "../../shared/assets/logo.svg";
 
-import { COLOR_YELLOW } from "./styles/colors";
+import { COLOR_YELLOW } from "../../shared/styles/colors";
 
 const HeaderStyle = styled.header`
   display: flex;

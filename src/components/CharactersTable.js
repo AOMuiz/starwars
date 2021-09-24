@@ -1,12 +1,22 @@
 import useSortableData from "../hooks/useSortableData";
-import { Label } from "./MovieDetail.style";
+import { Label } from "./MovieDetail/MovieDetail.style";
 import { Table, Thead, Tbody } from "../shared/styles/CharacterTable.styles";
 import { useState, useEffect } from "react";
+import { Select } from "../shared/styles/CharacterTable.styles";
 
-const CharactersTable = (props) => {
-  const { items, requestSort, sortConfig } = useSortableData(props.products);
-  const [totalCharcter, setTotalCharcter] = useState(0);
-  const [totalHeight, setTotalHeight] = useState();
+const CharactersTable = ({ products }) => {
+  const { items, requestSort, sortConfig } = useSortableData(products);
+  const [totalCharacter, setTotalCharcter] = useState(0);
+  const [totalHeight, setTotalHeight] = useState(0);
+  const [selectedId, setSelectedId] = useState(null);
+  const [filteredCharacter, setFilteredCharacter] = useState([]);
+  const genders = ["male", "female", "n/a", "hermaphrodite"];
+
+  const onSelectChange = (event) => {
+    console.log(event.target.value);
+    setSelectedId(event.target.value);
+  };
+
   const getClassNamesFor = (name) => {
     if (!sortConfig) {
       return;
@@ -23,6 +33,12 @@ const CharactersTable = (props) => {
     return heightCount;
   };
 
+  const filterCharacterByAge = (agetofilter) => {
+    let Lage = agetofilter;
+    let filtered = items.filter((age) => age.Lagetofilter);
+    return filtered;
+  };
+
   const getCharacter = (data) => {
     let character = data.filter((char) => char.name).length;
     return character;
@@ -31,12 +47,26 @@ const CharactersTable = (props) => {
   useEffect(() => {
     setTotalHeight(getHeight(items));
     setTotalCharcter(getCharacter(items));
+    filterCharacterByAge(items);
     console.log(getHeight(items));
-  }, [items, props.products]);
+  }, [items, products]);
 
   return (
     <div>
       <Label>Movie Characters</Label>
+
+      <div className="select">
+        <Select defaultValue="Select Age" onChange={(e) => onSelectChange(e)}>
+          <option value="Select Age" disabled>
+            Select Age
+          </option>
+          {genders.map((character, index) => (
+            <option key={index} value={`${character}`}>
+              {character}
+            </option>
+          ))}
+        </Select>
+      </div>
       <Table>
         <Thead>
           <tr>
@@ -80,8 +110,12 @@ const CharactersTable = (props) => {
         </Tbody>
         <tfoot>
           <tr>
-            <td>Total characters: {totalCharcter}</td>
-            <td>Total Heigths: {totalHeight}</td>
+            <th>Total Heigths:</th>
+            <td> {totalHeight}</td>
+          </tr>
+          <tr>
+            <th>Total Characters: </th>
+            <td>{totalCharacter}</td>
           </tr>
         </tfoot>
       </Table>

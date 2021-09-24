@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLOR_WHITE, COLOR_GRAY } from "../shared/styles/colors";
+import { COLOR_WHITE, COLOR_GRAY } from "../../shared/styles/colors";
 
 export const Wrapper = styled.div`
   margin-bottom: 3rem;

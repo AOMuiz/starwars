@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import useMovieList from "../hooks/useMovieList";
-import Loader from "../shared/Loader";
-import { Select } from "../shared/styles/CharacterTable.styles";
-import MovieDetail from "./MovieDetail";
+import useMovieList from "../../hooks/useMovieList";
+import Loader from "../../shared/components/Loader";
+import { Select } from "../../shared/styles/CharacterTable.styles";
+import MovieDetail from "../MovieDetail/MovieDetail";
 
 const MovieList = () => {
   const { loading, movieList, err, errMessage } = useMovieList();

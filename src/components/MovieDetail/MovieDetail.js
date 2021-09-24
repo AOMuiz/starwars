@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import useMovieDetail from "../hooks/useMovieDetails";
+import useMovieDetail from "../../hooks/useMovieDetails";
 // import { catchError } from "../api/starwarsapi";
-import Loader from "../shared/Loader";
-import CharactersTable from "./CharactersTable";
+import Loader from "../../shared/components/Loader";
+import CharactersTable from "../CharactersTable";
 import {
   Wrapper,
   Label,

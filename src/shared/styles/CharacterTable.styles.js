@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLOR_YELLOW, COLOR_WHITE, COLOR_BLUE, COLOR_BORDER } from "./colors";
+import { COLOR_YELLOW, COLOR_WHITE, COLOR_BLUE } from "./colors";
 
 export const Select = styled.select`
   -webkit-appearance: none;
@@ -42,6 +42,7 @@ export const Table = styled.table`
 export const Thead = styled.thead`
   th {
     text-align: left;
+    border: 1px solid black;
     border-bottom: 2px solid black;
     padding: 4px;
   }
