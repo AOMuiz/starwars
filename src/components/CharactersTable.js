@@ -9,8 +9,7 @@ const CharactersTable = ({ products }) => {
   const [totalCharacter, setTotalCharcter] = useState(0);
   const [totalHeight, setTotalHeight] = useState(0);
   const [selectedId, setSelectedId] = useState(null);
-  const [filteredCharacter, setFilteredCharacter] = useState([]);
-  const genders = ["male", "female", "n/a", "hermaphrodite"];
+  const [genders, setGenders] = useState([]);
 
   const onSelectChange = (event) => {
     console.log(event.target.value);
@@ -33,23 +32,32 @@ const CharactersTable = ({ products }) => {
     return heightCount;
   };
 
-  const filterCharacterByAge = (agetofilter) => {
-    let Lage = agetofilter;
-    let filtered = items.filter((age) => age.Lagetofilter);
-    return filtered;
-  };
+  // const filterCharacterByAge = (agetofilter) => {
+  //   let Lage = agetofilter;
+  //   let filtered = items.filter((age) => age.Lagetofilter);
+  //   return filtered;
+  // };
 
   const getCharacter = (data) => {
     let character = data.filter((char) => char.name).length;
     return character;
   };
 
+  const getGenders = (arr) => {
+    const unique = [...new Set(arr.map((item) => item.gender))];
+    setGenders(unique);
+  };
+
+  // [ 'A', 'B']
+
   useEffect(() => {
     setTotalHeight(getHeight(items));
     setTotalCharcter(getCharacter(items));
-    filterCharacterByAge(items);
+    console.log(getGenders(items));
     console.log(getHeight(items));
   }, [items, products]);
+
+  console.log(genders);
 
   return (
     <div>

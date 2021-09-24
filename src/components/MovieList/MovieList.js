@@ -5,7 +5,7 @@ import { Select } from "../../shared/styles/CharacterTable.styles";
 import MovieDetail from "../MovieDetail/MovieDetail";
 
 const MovieList = () => {
-  const { loading, movieList, err, errMessage } = useMovieList();
+  const { loading, movieList, error, errorMessage } = useMovieList();
   const [selectedId, setSelectedId] = useState(null);
 
   const onSelectChange = (event) => {
@@ -13,11 +13,13 @@ const MovieList = () => {
     setSelectedId(event.target.value);
   };
 
-  console.log(err, errMessage);
+  console.log(error, errorMessage);
 
   return (
     <div>
-      {loading ? (
+      {error ? (
+        <div>{errorMessage}: connect to the internet</div>
+      ) : loading ? (
         <Loader />
       ) : (
         <div>

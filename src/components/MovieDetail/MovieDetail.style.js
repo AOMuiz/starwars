@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-import { COLOR_WHITE, COLOR_GRAY } from "../../shared/styles/colors";
+import {
+  COLOR_WHITE,
+  COLOR_GRAY,
+  COLOR_YELLOW,
+} from "../../shared/styles/colors";
 
 export const Wrapper = styled.div`
   margin-bottom: 3rem;
@@ -11,6 +15,22 @@ export const Label = styled.h4`
   font-size: 1.8rem;
   color: ${COLOR_GRAY};
   margin-bottom: 1.5rem;
+`;
+
+export const Title = styled.h2`
+  font-family: "Star Jedi", "Open Sans", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  // background: -webkit-linear-gradient(${COLOR_YELLOW}, #333);
+  background: linear-gradient(315deg, #fbb034 0%, ${COLOR_YELLOW} 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  //   margin-top: 2rem;
+  // background-color: #fbb034;
+  // background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%) ;
 `;
 
 export const Text = styled.p`
@@ -30,14 +50,6 @@ export const Header = styled.header`
   color: ${COLOR_WHITE};
   margin-bottom: 3rem;
   text-align: center;
-`;
-
-export const Title = styled.h2`
-  font-family: "Star Jedi", "Open Sans", sans-serif;
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 2px;
-  //   margin-top: 2rem;
 `;
 
 export const Container = styled.div`
