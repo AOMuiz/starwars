@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useMovieList from "../hooks/useMovieList";
 import Loader from "../shared/Loader";
 import MovieDetail from "./MovieDetail";
