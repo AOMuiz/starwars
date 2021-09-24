@@ -23,13 +23,11 @@ const MovieList = () => {
         <div>
           <div className="select">
             <Select
-              name=""
-              id=""
               defaultValue="Select Movie"
               onChange={(e) => onSelectChange(e)}
             >
               <option value="Select Movie" disabled>
-                select Movie
+                Select Movie
               </option>
               {movieList.map((movie) => (
                 <option key={movie.id} value={`${movie.id}`}>

@@ -27,6 +27,7 @@ const CharactersTable = (props) => {
     let character = data.filter((char) => char.name).length;
     return character;
   };
+
   useEffect(() => {
     setTotalHeight(getHeight(items));
     setTotalCharcter(getCharacter(items));
