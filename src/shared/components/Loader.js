@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 import { ReactComponent as LoaderLogo } from "../assets/loader.svg";
 
-import { COLOR_YELLOW } from "../styles/colors";
+import { colors } from "../styles/colors";
 
 const loaderSpin = keyframes`
   from {
@@ -24,7 +24,7 @@ const LoaderStyle = styled.div`
   .loader-logo {
     animation: ${loaderSpin} infinite 2.5s linear;
     height: 8rem;
-    fill: ${COLOR_YELLOW};
+    fill: ${colors.yellow};
   }
 `;
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { COLOR_WHITE, COLOR_BLACK } from "./colors";
+import { colors } from "./colors";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -39,8 +39,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Star Jedi','Open Sans', sans-serif;
     font-size: 1.6rem;
     overflow-y: scroll;
-    color: ${COLOR_WHITE};
-    background-color: ${COLOR_BLACK};
+    color: ${colors.white};
+    background-color: ${colors.black};
     padding-bottom: 2rem;
   }
 

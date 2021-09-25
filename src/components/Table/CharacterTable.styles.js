@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { COLOR_YELLOW, COLOR_WHITE, COLOR_BLUE } from "./colors";
+import { colors } from "../../shared/styles/colors";
 
-export const Select = styled.select`
+export const StyledSelect = styled.select`
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -13,7 +13,7 @@ export const Select = styled.select`
   background-image: none;
   flex: 1;
   padding: 0 0.5em;
-  color: ${COLOR_WHITE};
+  color: ${colors.white};
   cursor: pointer;
   font-size: 1em;
 
@@ -28,13 +28,13 @@ export const Tbody = styled.tbody`
   }
 
   tr:hover {
-    // background-color: ${COLOR_WHITE};
-    color: ${COLOR_YELLOW};
-    border-color: ${COLOR_BLUE};
+    // background-color: ${colors.white};
+    color: ${colors.yellow};
+    border-color: ${colors.blue};
   }
 `;
 
-export const Table = styled.table`
+export const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.05);
@@ -58,7 +58,7 @@ export const Thead = styled.thead`
     padding: 0.5em;
     margin-bottom: 1px;
     background-color: transparent;
-    color: #fff;
+    color: ${colors.white};
     :hover {
       cursor: pointer;
     }

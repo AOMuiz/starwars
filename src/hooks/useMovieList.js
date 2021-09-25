@@ -14,6 +14,8 @@ export default function useMovieList() {
         setLoading(false);
         setError(true);
         setErrorMessage(err.message);
+        console.log(`${err.status}: ${err.message}`);
+        console.log(err);
         mounted = false;
         return;
       });

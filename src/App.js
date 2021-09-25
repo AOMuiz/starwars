@@ -1,19 +1,18 @@
 import React from "react";
-import MovieList from "./components/MovieList/MovieList";
-import Header from "./components/Header/Header";
-import GlobalStyle from "./shared/styles/global";
 import { ErrorBoundary } from "react-error-boundary";
+import MovieList from "./components/MovieList";
+import { Wrapper } from "./components/Wrapper";
 import ErrorFallback from "./ErrorFallBack";
+import GlobalStyle from "./shared/styles/global";
 
 const App = () => {
   return (
-    <div>
-      <Header />
+    <Wrapper>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <MovieList />
       </ErrorBoundary>
       <GlobalStyle />
-    </div>
+    </Wrapper>
   );
 };
 
