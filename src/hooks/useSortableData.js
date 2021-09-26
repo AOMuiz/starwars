@@ -3,7 +3,6 @@ import { useMemo, useState } from "react";
 const useSortableData = (data, config = null) => {
   const [sortConfig, setSortConfig] = useState(config);
   const [filteredMovie, setFilteredMovie] = useState(data);
-  console.log({ sortConfig });
 
   const sortedItems = useMemo(() => {
     let sortableItems = [...filteredMovie];
@@ -21,8 +20,6 @@ const useSortableData = (data, config = null) => {
     return sortableItems;
   }, [filteredMovie, sortConfig]);
 
-  // useEffect(() => {}, [sortedItems]);
-
   const requestSort = (key) => {
     let direction = "ascending";
     if (
@@ -34,9 +31,6 @@ const useSortableData = (data, config = null) => {
     }
     setSortConfig({ key, direction });
   };
-
-  console.log({ sortedItems });
-  // console.log(filteredMovie);
 
   return { items: sortedItems, requestSort, sortConfig, setFilteredMovie };
 };

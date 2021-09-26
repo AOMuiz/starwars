@@ -19,7 +19,6 @@ export const getAllMovie = async () => {
 export const getSingleMovie = async (id) => {
   const res = await fetch(`${API_URL}${id}/`);
   if (!res.ok) {
-    console.log(`${res.status}`);
     throw new Error(`HTTP error! status: ${res.status}`);
   }
 

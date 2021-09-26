@@ -60,8 +60,6 @@ const CharactersTable = ({ products: data }) => {
     getGenders(data);
   }, [items, data]);
 
-  // console.log(genders);
-
   return (
     <div>
       <Label>Movie Characters</Label>

@@ -16,8 +16,6 @@ const MovieList = () => {
     setSelectedId(event.target.value);
   };
 
-  console.log(error, errorMessage);
-
   useEffect(() => {
     setIsLoading(false);
   }, [selectedId]);

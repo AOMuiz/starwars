@@ -40,9 +40,6 @@ function App() {
     getSingleData("https://swapi.dev/api/films/1/");
   }, []);
 
-  console.log(movies);
-  console.log(singleMovie);
-
   // const onChangeSelected = (e) => {
   //   setSelected(e.target.value);
   // };
