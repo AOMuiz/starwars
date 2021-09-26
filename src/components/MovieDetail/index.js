@@ -32,7 +32,9 @@ const MovieDetail = ({ id }) => {
           </StyledHeader>
           <StyledWrapper>
             <StyledLabel>Description</StyledLabel>
-            <Text>{movie?.description}</Text>
+            <div className="slide-left">
+              <Text>{movie?.description}</Text>
+            </div>
           </StyledWrapper>
           <CharactersTable products={movie?.characters} />
         </StyledContainer>
