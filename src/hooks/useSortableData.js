@@ -1,10 +1,12 @@
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 
-const useSortableData = (items, config = null) => {
+const useSortableData = (data, config = null) => {
   const [sortConfig, setSortConfig] = useState(config);
+  const [filteredMovie, setFilteredMovie] = useState(data);
+  console.log({ sortConfig });
 
   const sortedItems = useMemo(() => {
-    let sortableItems = [...items];
+    let sortableItems = [...filteredMovie];
     if (sortConfig !== null) {
       sortableItems.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -17,7 +19,9 @@ const useSortableData = (items, config = null) => {
       });
     }
     return sortableItems;
-  }, [items, sortConfig]);
+  }, [filteredMovie, sortConfig]);
+
+  // useEffect(() => {}, [sortedItems]);
 
   const requestSort = (key) => {
     let direction = "ascending";
@@ -31,6 +35,9 @@ const useSortableData = (items, config = null) => {
     setSortConfig({ key, direction });
   };
 
-  return { items: sortedItems, requestSort, sortConfig };
+  console.log({ sortedItems });
+  // console.log(filteredMovie);
+
+  return { items: sortedItems, requestSort, sortConfig, setFilteredMovie };
 };
 export default useSortableData;

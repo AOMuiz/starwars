@@ -40,7 +40,7 @@ export const StyledTable = styled.table`
   background-color: rgba(255, 255, 255, 0.05);
 `;
 
-export const Thead = styled.thead`
+export const StyledThead = styled.thead`
   th {
     text-align: left;
     border: 1px solid black;
@@ -50,6 +50,7 @@ export const Thead = styled.thead`
   }
 
   button {
+    text-align: left;
     border: 0;
     border-radius: none;
     font-family: inherit;
@@ -59,6 +60,7 @@ export const Thead = styled.thead`
     margin-bottom: 1px;
     background-color: transparent;
     color: ${colors.white};
+    width: 100%;
     :hover {
       cursor: pointer;
     }

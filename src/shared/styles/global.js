@@ -3,14 +3,15 @@ import { createGlobalStyle } from "styled-components";
 import { colors } from "./colors";
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Star Jedi';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Star Jedi'), local('StarJedi'),
-      url('../assets/fonts/Starjedi.ttf') format('truetype');
-    display: swap;
-  }
+//   @font-face {
+//     font-family: 'Star Jedi';
+//     src: local('Star Jedi'), local('StarJedi'),
+//         url('../assets/fonts/StarJedi.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+    
+// }
 
   *,
   *::before,
@@ -36,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Star Jedi','Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     overflow-y: scroll;
     color: ${colors.white};

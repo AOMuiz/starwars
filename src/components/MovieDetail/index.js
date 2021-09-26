@@ -4,9 +4,12 @@ import Loader from "../../shared/components/Loader";
 import CharactersTable from "../Table";
 import styled from "styled-components";
 import { colors } from "../../shared/styles/colors";
+import ErrorFallback from "../../ErrorFallBack";
 
 const MovieDetail = ({ id }) => {
-  const { loading, movieDetail } = useMovieDetail(Number(id));
+  const { loading, movieDetail, error, errorMessage } = useMovieDetail(
+    Number(id)
+  );
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
@@ -15,7 +18,12 @@ const MovieDetail = ({ id }) => {
 
   return (
     <div>
-      {loading ? (
+      {error ? (
+        <div>
+          <ErrorFallback error errorMessage />
+          {errorMessage}: connect to the internet
+        </div>
+      ) : loading ? (
         <Loader />
       ) : (
         <StyledContainer>
@@ -23,7 +31,7 @@ const MovieDetail = ({ id }) => {
             <Title>{movie?.title}</Title>
           </StyledHeader>
           <StyledWrapper>
-            <Label>Description</Label>
+            <StyledLabel>Description</StyledLabel>
             <Text>{movie?.description}</Text>
           </StyledWrapper>
           <CharactersTable products={movie?.characters} />
@@ -39,11 +47,17 @@ export const StyledWrapper = styled.div`
   margin-bottom: 3rem;
 `;
 
-export const Label = styled.h4`
-  font-family: inherit;
+export const StyledLabel = styled.h4`
+  font-family: "Star jedi";
+  // font-family: inherit;
   font-size: 1.8rem;
   color: ${colors.gray};
   margin-bottom: 1.5rem;
+  background: linear-gradient(315deg, #fbb034 0%, ${colors.yellow} 74%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const Title = styled.h2`
@@ -51,15 +65,11 @@ export const Title = styled.h2`
   font-size: 4rem;
   margin-bottom: 1.5rem;
   letter-spacing: 2px;
-  // background: -webkit-linear-gradient(${colors.yellow}, #333);
   background: linear-gradient(315deg, #fbb034 0%, ${colors.yellow} 74%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  //   margin-top: 2rem;
-  // background-color: #fbb034;
-  // background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const Text = styled.p`

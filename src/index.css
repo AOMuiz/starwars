@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Star Jedi";
   font-style: normal;
-  font-weight: 300;
+  font-weight: normal;
   src: local("Star Jedi"), local("StarJedi"),
     url("./shared/assets/fonts/Starjedi.ttf") format("truetype");
   display: swap;
 }
 
-html {
+/* html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   overflow-y: scroll;
-}
+} */
 
 /* a,
 a:link,
@@ -26,30 +26,10 @@ a:focus {
   text-decoration: none;
   cursor: pointer;
 } */
-
-/* select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0;
-  background: #5c6664;
-  background-image: none;
-  flex: 1;
-  padding: 0 0.5em;
-  color: #fff;
-  cursor: pointer;
-  font-size: 1em;
-}
-select::-ms-expand {
-  display: none;
-} */
 .select {
   position: relative;
   display: flex;
-  width: 30rem;
+  width: 27rem;
   height: 4.5rem;
   line-height: 3;
   background: #5c6664;
@@ -74,16 +54,6 @@ select::-ms-expand {
   color: #2098d1;
 }
 
-/* table {
-  width: 100%;
-  border-collapse: collapse;
-} */
-
-/* thead th {
-  text-align: left;
-  border-bottom: 2px solid black;
-}
-
 thead button {
   border: 0;
   border-radius: none;
@@ -94,16 +64,4 @@ thead button {
   margin-bottom: 1px;
   background-color: transparent;
   color: #fff;
-} */
-
-/* thead button.ascending::after {
-  content: "👇";
-  display: inline-block;
-  margin-left: 1em;
 }
-
-thead button.descending::after {
-  content: "☝️";
-  display: inline-block;
-  margin-left: 1em;
-} */
