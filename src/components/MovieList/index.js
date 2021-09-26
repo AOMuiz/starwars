@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useMovieList from "../../hooks/useMovieList";
 import Loader from "../../shared/components/Loader";
-// import { StyledSelect } from "../../shared/styles/CharacterTable.styles";
+import { StyledSelect } from "../Table/CharacterTable.styles";
 import MovieDetail from "../MovieDetail";
 import Select from "../Select";
 
@@ -16,6 +16,7 @@ const MovieList = () => {
   };
 
   console.log(error, errorMessage);
+
   useEffect(() => {
     setIsLoading(false);
   }, [selectedId]);
@@ -28,11 +29,13 @@ const MovieList = () => {
         <Loader />
       ) : (
         <div>
+          <Select
+            defaultval="Select Movie"
+            data={movieList}
+            onSelectChange={onSelectChange}
+          />
           {/* <div className="select">
-            <StyledSelect
-              defaultValue="Select Movie"
-              onChange={(e) => onSelectChange(e)}
-            >
+            <StyledSelect defaultValue="Select Movie" onChange={onSelectChange}>
               <option value="Select Movie" disabled>
                 Select Movie
               </option>
@@ -43,11 +46,7 @@ const MovieList = () => {
               ))}
             </StyledSelect>
           </div> */}
-          <Select
-            defaultval="Select Movie"
-            data={movieList}
-            onSelectChange={onSelectChange}
-          />
+
           {isloading ? (
             <Loader />
           ) : selectedId ? (

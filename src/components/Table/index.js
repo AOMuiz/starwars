@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors } from "../../shared/styles/colors";
 import { SortData } from "../../shared/helpers/data";
+
 import Select from "../Select";
 
-const CharactersTable = ({ products }) => {
-  const { items, requestSort, sortConfig } = useSortableData(products);
+const CharactersTable = ({ products: characters }) => {
+  const { items, requestSort, sortConfig } = useSortableData(characters);
   const [totalCharacter, setTotalCharcter] = useState(0);
   const [totalHeight, setTotalHeight] = useState(0);
   const [genders, setGenders] = useState([]);
@@ -80,7 +81,7 @@ const CharactersTable = ({ products }) => {
         <Thead>
           <tr>
             {SortData.map((item) => (
-              <th>
+              <th key={item}>
                 <button
                   type="button"
                   onClick={() => requestSort(item)}

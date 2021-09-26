@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useMovieDetail from "../../hooks/useMovieDetails";
 import Loader from "../../shared/components/Loader";
-import CharactersTable from "../Table/CharactersTable";
+import CharactersTable from "../Table";
 import styled from "styled-components";
 import { colors } from "../../shared/styles/colors";
 
