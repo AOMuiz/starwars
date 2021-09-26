@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../../shared/styles/colors";
 
-const TableFoot = ({ totalHeight, totalCharacter, convertedHeight }) => {
+const Footer = ({ totalHeight, totalCharacter, convertedHeight }) => {
   return (
     <StyledTfoot>
-      {/* <TableContainer type value /> */}
       <StyledTr>
         <th>Total Characters</th>
         <td>{totalCharacter}</td>
@@ -20,7 +19,7 @@ const TableFoot = ({ totalHeight, totalCharacter, convertedHeight }) => {
   );
 };
 
-export default TableFoot;
+export default Footer;
 
 const StyledTfoot = styled.tfoot`
   color: ${colors.yellow};

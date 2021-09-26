@@ -3,16 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import { colors } from "./colors";
 
 const GlobalStyle = createGlobalStyle`
-//   @font-face {
-//     font-family: 'Star Jedi';
-//     src: local('Star Jedi'), local('StarJedi'),
-//         url('../assets/fonts/StarJedi.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-//     font-display: swap;
-    
-// }
-
   *,
   *::before,
   *::after {

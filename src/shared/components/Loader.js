@@ -5,6 +5,14 @@ import { ReactComponent as LoaderLogo } from "../assets/loader.svg";
 
 import { colors } from "../styles/colors";
 
+const Loader = () => (
+  <LoaderStyle data-testid="loader">
+    <LoaderLogo className="loader-logo" />
+  </LoaderStyle>
+);
+
+export default Loader;
+
 const loaderSpin = keyframes`
   from {
     transform: rotate(0deg);
@@ -27,11 +35,3 @@ const LoaderStyle = styled.div`
     fill: ${colors.yellow};
   }
 `;
-
-const Loader = () => (
-  <LoaderStyle data-testid="loader">
-    <LoaderLogo className="loader-logo" />
-  </LoaderStyle>
-);
-
-export default Loader;

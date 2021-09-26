@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import useSortableData from "../../hooks/useSortableData";
-import { StyledTable, StyledThead, Tbody } from "./CharacterTable.styles";
+import { StyledTable, StyledThead, Tbody } from "./styles";
 
 import styled from "styled-components";
-import { colors } from "../../shared/styles/colors";
+import { colors } from "../../shared/styles/";
 import { SortData } from "../../shared/helpers/data";
 
 import Select from "../Select";
-import TableFoot from "./TableFoot";
+import Footer from "./Footer";
 
 const CharactersTable = ({ products: data }) => {
   const [totalCharacter, setTotalCharcter] = useState(0);
@@ -93,7 +93,7 @@ const CharactersTable = ({ products: data }) => {
             </tr>
           ))}
         </Tbody>
-        <TableFoot
+        <Footer
           totalHeight={totalHeight}
           totalCharacter={totalCharacter}
           convertedHeight={convertedHeight}

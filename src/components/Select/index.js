@@ -1,5 +1,6 @@
 import React from "react";
-import { StyledSelect } from "../Table/CharacterTable.styles";
+import styled from "styled-components";
+import { colors } from "../../shared/styles";
 
 function Select({ defaultval, data, onSelectChange }) {
   return (
@@ -19,3 +20,24 @@ function Select({ defaultval, data, onSelectChange }) {
 }
 
 export default Select;
+
+const StyledSelect = styled.select`
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  background: #5c6664;
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: ${colors.white};
+  cursor: pointer;
+  font-size: 1em;
+
+  ::-ms-expand {
+    display: none;
+  }
+`;
