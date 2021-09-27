@@ -35,6 +35,7 @@ export const Tbody = styled.tbody`
 `;
 
 export const StyledTable = styled.table`
+  font-family: "Roboto", sans-serif;
   width: 100%;
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.05);

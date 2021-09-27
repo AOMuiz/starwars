@@ -63,7 +63,7 @@ export const StyledLabel = styled.h4`
 `;
 
 export const Title = styled.h2`
-  font-family: "Star Jedi", "Open Sans", sans-serif;
+  font-family: "Star Jedi", "Roboto", "Open Sans", sans-serif;
   font-size: 4rem;
   margin-bottom: 1.5rem;
   letter-spacing: 2px;

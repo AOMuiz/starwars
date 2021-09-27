@@ -7,6 +7,8 @@
   display: swap;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+
 .select {
   position: relative;
   display: flex;
@@ -50,6 +52,7 @@ thead button {
 .slide-left {
   width: 100%;
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 .slide-left > * {
   animation: slide-left 10s;

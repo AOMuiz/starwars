@@ -15,10 +15,10 @@ const StyledError = styled.div`
 display: flex,
 text-align: center
 font-size: 2rem;
-font-family: 'Star Jedi', 'Roboto';
+font-family: 'Star Jedi', 'Roboto', sans-serif;
 justify-content: center;
 align-items:center;
-height: 100vh
+height: 100vh;
 pre{
   color: red
 }

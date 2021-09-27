@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     box-sizing: border-box;
+    font-family: 'Roboto' sans-serif;
 
     /* 768px */
     @media screen and (max-width: 48em) {
@@ -27,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto' sans-serif;
     font-size: 1.6rem;
     overflow-y: scroll;
     color: ${colors.white};

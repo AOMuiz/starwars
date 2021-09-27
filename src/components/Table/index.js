@@ -106,7 +106,7 @@ const CharactersTable = ({ products: data }) => {
 export default CharactersTable;
 
 export const Label = styled.h4`
-  font-family: "Star jedi";
+  font-family: "Star jedi", "Roboto", sans-serif;
   font-weight: light;
   font-size: 1.8rem;
   color: ${colors.gray};

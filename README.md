@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Star Wars Movie / SWAPI API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Using API from [SWAPI](https://swapi.co).<br>
+To see this project in action, go to [Demo Star Wars](https://6bseh.csb.app/) on Code SandBox
 
-## Available Scripts
+## Preview
 
-In the project directory, you can run:
+<span>
+<img src="./docs/assets/preview.gif" alt="preview"  width="270" />
+</span>
 
-### `yarn start`
+<hr />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Clone this repo :
+`git clone https://github.com/AOMuiz/starwars`
 
-### `yarn test`
+Navigate to the root folder and install all dependencies :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `yarn` or `npm install`
 
-### `yarn build`
+Start Development Mode :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `yarn start` or `npm start`
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Happy Hacking!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## A brief description of the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Task
 
-### `yarn eject`
+> Build a Starwars Website Using Swapi api
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> List all characters(name, height, gender) in a table based on selected movie.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Filter table based on the selected gender.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> Sort the table by clicking on the header in ascending or descending order.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> Show the sum of the character and the total heights in cm(ft/in)
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Used `React Js` for building the website.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Implemented website styling using `Styled Components`.
 
-### Code Splitting
+3. Used `Error Boundary` npm package for handling errors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Used `fetch api` for data fecthing.
 
-### Analyzing the Bundle Size
+5. Created `Custom Hooks` for data fetching and rendering.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Style Utilities
 
-### Making a Progressive Web App
+### Relative Unit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project using relative unit based 10px. so you can use `1rem` which means `10px` propeties in css to help ours styling more easier handling Resposive.
 
-### Advanced Configuration
+### Media Queries
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Relative Unit
 
-### Deployment
+| State           | Properties  |
+| --------------- | ----------- |
+| Default         | 1rem = 10px |
+| max-width 768px | 1rem = 9px  |
+| max-width 576px | 1rem = 8px  |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Container
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| State            | Properties     |
+| ---------------- | -------------- |
+| Default          | width = 100%   |
+| min-width 576px  | width = 540px  |
+| min-width 768px  | width = 720px  |
+| min-width 992px  | width = 960px  |
+| min-width 1200px | width = 1140px |
