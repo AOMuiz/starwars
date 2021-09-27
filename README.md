@@ -58,7 +58,7 @@ Start Development Mode :
 
 4. Used `fetch api` for data fecthing.
 
-5. Created `Custom Hooks` for data fetching and rendering.
+5. Created `Custom Hooks` for handling fetched data and rendering.
 
 ## Style Utilities
 
