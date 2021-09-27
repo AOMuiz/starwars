@@ -6,7 +6,14 @@ To see this project in action, go to [Demo Star Wars](https://6bseh.csb.app/) on
 ## Preview
 
 <span>
-<img src="./docs/assets/preview.gif" alt="preview"  width="270" />
+<img src="./docs/assets/initialpage.png" alt="preview"  width="270" />
+<img src="./docs/assets/loadingstate.png" alt="preview"  width="270" />
+<img src="./docs/assets/loadingselect-movie.png" alt="preview"  width="270" />
+<img src="./docs/assets/moviedesc-marquee.png" alt="preview"  width="270" />
+<img src="./docs/assets/moviedetail.png" alt="preview"  width="270" />
+<img src="./docs/assets/tablefiltered.png" alt="preview"  width="270" />
+<img src="./docs/assets/tableSorted-asc.png" alt="preview"  width="270" />
+<img src="./docs/assets/tableSorted-desc.png" alt="preview"  width="270" />
 </span>
 
 <hr />
